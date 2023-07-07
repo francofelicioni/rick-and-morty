@@ -3,21 +3,11 @@ import Button from './Button';
 import Card from './Card';
 import { characters } from '../utils/characters';
 
+
 export default function SearchBar() {
 
-    const {franfe} = characters.alias;
-
-    console.log(franfe)
-
-    const [activeCharacter, setActiveCharacter] = useState(null);
-
-    const handleCharacterClick = (character) => {
-        setActiveCharacter(character);
-    };
-
-    const handleBackButtonClick = () => {
-        setActiveCharacter(null);
-    };
+    const franfe = characters[0];
+    const suarez = characters[1];
 
     return (
         <div>
@@ -26,19 +16,15 @@ export default function SearchBar() {
             <div className="flex py-4">
                 <Button
                     label="Franfe"
-                    character={characters[0]}
-                    onClick={() => handleCharacterClick(characters[0])}
+                    character={franfe}
+
                 />
                 <Button
                     label="Suarez"
-                    character={characters[1]}
-                    onClick={() => handleCharacterClick(characters[1])}
+                    character={suarez}
+
                 />
             </div>
-
-            {activeCharacter && (
-                <Card character={activeCharacter} onBackButtonClick={handleBackButtonClick} />
-            )}
         </div>
     );
 }
