@@ -16,6 +16,11 @@ module.exports = {
         'green': '	#97ce4c',
         'pink': '#e89ac7',
         'violet': '79069F',
+        'grey-background' : '#3C3E44',
+        //Character status colors
+        'alive':'#16a34a',
+        'dead': '#dc2626',
+        'unknown' : '#6b7280'
       },
     },
   },
