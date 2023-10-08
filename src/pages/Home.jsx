@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addAmount, decrement, increment } from '../features/counter/counterSlice';
 import { CharacterList } from '../components/CharacterList';
 import Pagination from '../components/pagination/Pagination';
 import Header from '../components/header/Header';
