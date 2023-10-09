@@ -12,9 +12,9 @@ const Pagination = ({ setPageNumber, pageNumber }) => {
     }
 
     return (
-        <div className='flex justify-between p-4'>
-            <button onClick={prev} className='text-white font-bold uppercase border border-black bg-cyan-300 rounded-lg py-1 px-2'> Prev </button>
-            <button onClick={next} className='text-white font-bold uppercase border border-black bg-cyan-300 rounded-lg py-1 px-2'> Next </button>
+        <div className='flex w-full justify-between p-4'>
+            <button onClick={prev} className='text-white font-bold uppercase border border-black rounded-lg py-1 px-2'> Prev </button>
+            <button onClick={next} className='text-white font-bold uppercase border border-black rounded-lg py-1 px-2'> Next </button>
         </div>
     )
 }
