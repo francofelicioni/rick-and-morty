@@ -1,20 +1,24 @@
 import React from 'react'
+import ReactPaginate from 'react-paginate';
 
-const Pagination = ({ setPageNumber, pageNumber }) => {
+const Pagination = ({info, setPageNumber, pageNumber }) => {
 
-    const prev = () => {
-        if (pageNumber === 1) return
-        setPageNumber(pageNumber - 1)
-    }
-    const next = () => {
-        if (pageNumber === 42) return
-        setPageNumber(pageNumber + 1)
-    }
 
     return (
         <div className='flex w-full justify-between p-4'>
-            <button onClick={prev} className='text-white font-bold uppercase border border-black rounded-lg py-1 px-2'> Prev </button>
-            <button onClick={next} className='text-white font-bold uppercase border border-black rounded-lg py-1 px-2'> Next </button>
+            <ReactPaginate
+                breakLabel="..."
+                nextLabel="Next"
+                nextClassName="border border rounded-lg py-1 px-2 w-20 bg-blue-400 text-white text-center"
+                previousLabel="Previous"
+                previousClassName="border border rounded-lg py-1 px-2 w-20 bg-blue-400 text-white text-center"
+                onPageChange={(data)=>{setPageNumber(data.selected ++)}}
+                pageRangeDisplayed={1}
+                pageCount={info?.pages}
+                forcePage={pageNumber === 1 ? 0 : pageNumber --}
+                className='flex font-bold justify-between items-center w-full lg:w-[50%] mx-auto'
+                activeClassName='font-bold border w-6 h-6 text-center p-2.5 flex justify-center items-center rounded-full text-white'
+            />
         </div>
     )
 }
