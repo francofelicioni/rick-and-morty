@@ -27,8 +27,7 @@ const Home = () => {
     <>
       <div className='bg-gradient-to-r from-purple-400 to-indigo-500 h-full'>
         <Header />
-        <div className='container mx-auto'>
-          <Pagination setPageNumber={setPageNumber} pageNumber={pageNumber} />
+        <div className='container mx-auto pt-4'>
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
           {
             (results)
@@ -40,7 +39,7 @@ const Home = () => {
                 <img src="images/not-found.png" alt="" />
               </div>
           }
-          <Pagination setPageNumber={setPageNumber} pageNumber={pageNumber} />
+          <Pagination info={info} setPageNumber={setPageNumber} pageNumber={pageNumber} />
         </div>
       </div>
     </>
