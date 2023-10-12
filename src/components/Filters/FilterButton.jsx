@@ -4,10 +4,8 @@ const FilterButton = ({ selectedItems, setSelectedItems, item, name, index, task
 
     let itemId = `${name}-${index}`;
 
-    const isSelected = selectedItems[name] === item;
+    const isSelected = (selectedItems[name]).toLowerCase() === item.toLowerCase();
 
-    
-    
     const handleClick = () => {
         const updatedSelectedItems = { ...selectedItems };
         updatedSelectedItems[name] = item;

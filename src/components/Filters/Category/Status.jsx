@@ -1,7 +1,7 @@
 import React from 'react'
 import FilterButton from '../FilterButton'
 
-const Status = ({ selectedItems, setSelectedItems, handleSelect, setStatus, setPageNumber }) => {
+const Status = ({ selectedItems, setSelectedItems, setStatus, setPageNumber }) => {
 
     const status = ['Alive', 'Dead', 'Unknown']
 

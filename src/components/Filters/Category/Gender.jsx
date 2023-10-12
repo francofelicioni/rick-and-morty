@@ -1,9 +1,9 @@
 import React from 'react'
 import FilterButton from '../FilterButton'
 
-const Gender = ({selectedItems, setSelectedItems, handleSelect, setGender, setPageNumber}) => {
+const Gender = ({selectedItems, setSelectedItems, setGender, setPageNumber}) => {
 
-    const genders = ['female', 'male', 'genderless', 'unknown']
+    const genders = ['Female', 'Male', 'Genderless', 'Unknown']
 
   
     return (

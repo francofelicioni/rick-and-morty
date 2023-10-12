@@ -1,9 +1,9 @@
 import React from 'react'
 import FilterButton from '../FilterButton'
 
-const Species = ({selectedItems, setSelectedItems, handleSelect, setSpecies, setPageNumber}) => {
+const Species = ({selectedItems, setSelectedItems, setSpecies, setPageNumber}) => {
 
-    let species = ['human', 'alien', 'humanoid', 'poopybutthole', 'mythological', 'unknown', 'animal', 'disease', 'robot', 'cronenberg', 'planet']
+    let species = ['Human', 'Alien', 'Humanoid', 'Poopybutthole', 'Mythological', 'Unknown', 'Animal', 'Disease', 'Robot', 'Cronenberg', 'Planet']
     return (
         <div>
 
