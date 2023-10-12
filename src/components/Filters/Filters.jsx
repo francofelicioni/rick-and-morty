@@ -7,6 +7,11 @@ import Status from './Category/Status';
 const Filters = () => {
 
     const [accordionItems, setAccordionItems] = useState([])
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    const handleSelect = (itemId) => {
+        setSelectedItem(itemId);
+    };
 
     useEffect(() => {
         setAccordionItems(
@@ -51,7 +56,6 @@ const Filters = () => {
 
     const accordion = new Accordion(accordionItems, options);
 
-
     return (
         <div className='flex flex-col w-[20%] p-5'>
 
@@ -59,9 +63,9 @@ const Filters = () => {
             <span className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
 
             <div className='bg-black rounded-lg text-unknown' id="accordion-collapse" data-accordion="collapse">
-                <Gender />
-                <Species />
-                <Status />
+                <Gender selectedItem={selectedItem} handleSelect={handleSelect} />
+                {/* <Species />
+                <Status /> */}
             </div>
 
 
