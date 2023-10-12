@@ -11,7 +11,6 @@ const Home = () => {
   const [searchInput, setSearchInput] = useState('');
   const [fetchedData, setFetchedData] = useState([]);
   let { info, results } = fetchedData;
-  // let apiUrl = `https://rickandmortyapi.com/api/character/?page=${pageNumber}/character/?name=${searchInput}`
   let apiUrl = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${searchInput}`
 
 
