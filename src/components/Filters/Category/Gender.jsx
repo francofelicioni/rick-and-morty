@@ -1,11 +1,11 @@
 import React from 'react'
 import FilterButton from '../FilterButton'
 
-const Gender = ({selectedItem, handleSelect, setGender, setPageNumber}) => {
+const Gender = ({selectedItems, setSelectedItems, handleSelect, setGender, setPageNumber}) => {
 
-    const genders = ['Female', 'Male', 'Genderless', 'Unknown']
+    const genders = ['female', 'male', 'genderless', 'unknown']
 
-
+  
     return (
         <div>
             <div>
@@ -26,8 +26,8 @@ const Gender = ({selectedItem, handleSelect, setGender, setPageNumber}) => {
                         task={setGender}
                         index={index}
                         item={item}
-                        selectedItem={selectedItem}
-                        handleSelect={handleSelect}
+                        selectedItems={selectedItems}
+                        setSelectedItems={setSelectedItems}
                     />
                     ))}
                 </div>

@@ -4,20 +4,30 @@ import Gender from './Category/Gender';
 import Species from './Category/Species';
 import Status from './Category/Status';
 
-const Filters = ({setGender, setSpecies, setStatus , setPageNumber}) => {
+const Filters = ({ setGender, setSpecies, setStatus, setPageNumber }) => {
 
     const [accordionItems, setAccordionItems] = useState([])
-    const [selectedItem, setSelectedItem] = useState(null);
-
-    const handleSelect = (itemId) => {
-        setSelectedItem(itemId);
-    };
+    const [selectedItems, setSelectedItems] = useState(
+        {
+            gender: '',
+            species: '',
+            status: '',
+        }
+    );
 
     const handleClick = () => {
         setGender('');
         setSpecies('');
         setStatus('');
+        setSelectedItems(
+            {
+                gender: '',
+                species: '',
+                status: '',
+            }
+        )
     }
+
     useEffect(() => {
         setAccordionItems(
             {
@@ -45,18 +55,6 @@ const Filters = ({setGender, setSpecies, setStatus , setPageNumber}) => {
         alwaysOpen: true,
         activeClasses: 'bg-black dark:bg-gray-800 text-gray-900 dark:text-white',
         inactiveClasses: 'text-gray-500 dark:text-gray-400',
-        onOpen: (item) => {
-            console.log('accordion item has been shown');
-            console.log(item);
-        },
-        onClose: (item) => {
-            console.log('accordion item has been hidden');
-            console.log(item);
-        },
-        onToggle: (item) => {
-            console.log('accordion item has been toggled');
-            console.log(item);
-        },
     };
 
     const accordion = new Accordion(accordionItems, options);
@@ -67,10 +65,10 @@ const Filters = ({setGender, setSpecies, setStatus , setPageNumber}) => {
             <span className='font-bold text-center lg:text-xl'>FILTERS</span>
             <span onClick={handleClick} className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
 
-            <div className='bg-black rounded-lg text-unknown' id="accordion-collapse" data-accordion="collapse">
-                <Gender selectedItem={selectedItem} handleSelect={handleSelect} setGender={setGender} setPageNumber={setPageNumber}/>
-                <Species selectedItem={selectedItem} handleSelect={handleSelect} setSpecies={setSpecies} setPageNumber={setPageNumber}/>
-                <Status selectedItem={selectedItem} handleSelect={handleSelect} setStatus={setStatus} setPageNumber={setPageNumber}/>
+            <div className='bg-black mt-4 rounded-lg text-unknown' id="accordion-collapse" data-accordion="collapse">
+                <Gender selectedItems={selectedItems} setSelectedItems={setSelectedItems} setGender={setGender} setPageNumber={setPageNumber} />
+                <Species selectedItems={selectedItems} setSelectedItems={setSelectedItems} setSpecies={setSpecies} setPageNumber={setPageNumber} />
+                <Status selectedItems={selectedItems} setSelectedItems={setSelectedItems} setStatus={setStatus} setPageNumber={setPageNumber} />
             </div>
 
 

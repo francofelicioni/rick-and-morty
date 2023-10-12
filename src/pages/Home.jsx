@@ -24,7 +24,6 @@ const Home = () => {
   useEffect(() => {
     (async function () {
       let data = await fetch(apiUrl).then(res => res.json())
-      console.log(apiUrl)
       setFetchedData(data)
     })()
   }, [apiUrl, pageNumber])
