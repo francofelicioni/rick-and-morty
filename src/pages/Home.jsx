@@ -4,6 +4,7 @@ import { CharacterList } from '../components/CharacterList';
 import Pagination from '../components/pagination/Pagination';
 import Header from '../components/header/Header';
 import SearchBar from '../components/Search/SearchBar';
+import Filters from '../components/Filters/Filters';
 
 
 const Home = () => {
@@ -27,16 +28,20 @@ const Home = () => {
         <Header />
         <div className='container mx-auto pt-4'>
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
-          {
-            (results)
-              ? <CharacterList characters={results} />
+          <div className='flex'>
 
-              :
-              <div className='flex flex-col justify-center items-center'>
-                <p className='flex justify-center p-8 text-xxl font-bold'>No characters found! Please try again.</p>
-                <img src="images/not-found.png" alt="" />
-              </div>
-          }
+            <Filters />
+            {
+              (results)
+                ? <CharacterList characters={results} />
+
+                :
+                <div className='flex flex-col justify-center items-center'>
+                  <p className='flex justify-center p-8 text-xxl font-bold'>No characters found! Please try again.</p>
+                  <img src="images/not-found.png" alt="" />
+                </div>
+            }
+          </div>
           <Pagination info={info} setPageNumber={setPageNumber} pageNumber={pageNumber} />
         </div>
       </div>
