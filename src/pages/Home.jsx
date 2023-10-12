@@ -10,14 +10,21 @@ import Filters from '../components/Filters/Filters';
 const Home = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [searchInput, setSearchInput] = useState('');
+  
+  const [gender, setGender] = useState('')
+  const [species, setSpecies] = useState('')
+  const [status, setStatus] = useState('')
+
   const [fetchedData, setFetchedData] = useState([]);
+
   let { info, results } = fetchedData;
-  let apiUrl = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${searchInput}`
+  let apiUrl = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${searchInput}&status=${status}&gender=${gender}&species=${species}`
 
 
   useEffect(() => {
     (async function () {
       let data = await fetch(apiUrl).then(res => res.json())
+      console.log(apiUrl)
       setFetchedData(data)
     })()
   }, [apiUrl, pageNumber])
@@ -30,7 +37,7 @@ const Home = () => {
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
           <div className='flex'>
 
-            <Filters />
+            <Filters setGender={setGender} setSpecies={setSpecies} setStatus={setStatus} setPageNumber={setPageNumber}/>
             {
               (results)
                 ? <CharacterList characters={results} />

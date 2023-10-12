@@ -4,7 +4,7 @@ import Gender from './Category/Gender';
 import Species from './Category/Species';
 import Status from './Category/Status';
 
-const Filters = () => {
+const Filters = ({setGender, setSpecies, setStatus , setPageNumber}) => {
 
     const [accordionItems, setAccordionItems] = useState([])
     const [selectedItem, setSelectedItem] = useState(null);
@@ -13,6 +13,11 @@ const Filters = () => {
         setSelectedItem(itemId);
     };
 
+    const handleClick = () => {
+        setGender('');
+        setSpecies('');
+        setStatus('');
+    }
     useEffect(() => {
         setAccordionItems(
             {
@@ -60,12 +65,12 @@ const Filters = () => {
         <div className='flex flex-col w-[20%] p-5'>
 
             <span className='font-bold text-center lg:text-xl'>FILTERS</span>
-            <span className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
+            <span onClick={handleClick} className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
 
             <div className='bg-black rounded-lg text-unknown' id="accordion-collapse" data-accordion="collapse">
-                <Gender selectedItem={selectedItem} handleSelect={handleSelect} />
-                {/* <Species />
-                <Status /> */}
+                <Gender selectedItem={selectedItem} handleSelect={handleSelect} setGender={setGender} setPageNumber={setPageNumber}/>
+                <Species selectedItem={selectedItem} handleSelect={handleSelect} setSpecies={setSpecies} setPageNumber={setPageNumber}/>
+                <Status selectedItem={selectedItem} handleSelect={handleSelect} setStatus={setStatus} setPageNumber={setPageNumber}/>
             </div>
 
 
