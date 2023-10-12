@@ -19,7 +19,6 @@ const Home = () => {
     (async function () {
       let data = await fetch(apiUrl).then(res => res.json())
       setFetchedData(data)
-      console.log(apiUrl)
     })()
   }, [apiUrl, pageNumber])
 
