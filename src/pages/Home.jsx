@@ -30,7 +30,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='bg-gradient-to-r from-purple-400 to-indigo-500 h-full'>
+      <div className='bg-white dark:bg-slate-800 h-full'>
         <Header />
         <div className='container mx-auto pt-4'>
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
