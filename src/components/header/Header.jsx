@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import { MdDarkMode, MdOutlineDarkMode } from 'react-icons/md'
+
+import { MdOutlineDarkMode, MdDarkMode } from 'react-icons/md';
 
 const Header = () => {
 
@@ -43,17 +44,17 @@ const Header = () => {
         <div className='absolute right-0 p-5 flex items-center' onClick={handleClick}>
           {theme === 'dark' ? (
             <>
-              <button className='w-10 h-10 text-white' >
+              <button className='flex items-center gap-2 text-white' >
                 <MdOutlineDarkMode />
+                <span className='text-white'>Light</span>
               </button>
-              <span className='text-white'>Light</span>
             </>
           ) : (
             <>
-              <button className='w-10 h-10 text-white' >
+              <button className='flex items-center gap-2 text-black' >
                 <MdDarkMode />
+                <span className='text-white'>Dark</span>
               </button>
-              <span className='text-white'>Dark</span>
             </>
           )}
         </div>
