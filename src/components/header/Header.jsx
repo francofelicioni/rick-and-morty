@@ -38,22 +38,22 @@ const Header = () => {
 
   return (
     <>
-      <div className='flex justify-center items-center py-2 dark:bg-black'>
-        <h1 className="text-pink font-bold hover:text-light-salmon text-3xl lg:text-5xl">  RICK  <span className='text-green'>&</span> MORTY <span className='text-yellow'>WIKI</span></h1>
+      <div className='flex justify-center items-center py-2 bg-light-salmon dark:bg-black'>
+        <h1 className="text-brown dark:text-pink font-bold hover:text-black hover:dark:text-light-salmon text-3xl lg:text-5xl transition easy-in duration-500">  RICK  <span className='text-white dark:text-green'>&</span> MORTY <span className='text-yellow'>WIKI</span></h1>
 
         <div className='absolute right-0 p-5 flex items-center' onClick={handleClick}>
           {theme === 'dark' ? (
             <>
               <button className='flex items-center gap-2 text-white' >
                 <MdOutlineDarkMode />
-                <span className='text-white'>Light</span>
+                <span className='text-black dark:text-white font-semibold'>Light</span>
               </button>
             </>
           ) : (
             <>
               <button className='flex items-center gap-2 text-black' >
                 <MdDarkMode />
-                <span className='text-white'>Dark</span>
+                <span className='text-black dark:text-white font-semibold'>Dark</span>
               </button>
             </>
           )}

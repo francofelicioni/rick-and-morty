@@ -28,7 +28,7 @@ const FilterButton = ({ selectedItems, setSelectedItems, item, name, index, task
                 />
                 <label
                     htmlFor={itemId}
-                    className={`cursor-pointer hover:font-bold text-white bg-black ${isSelected ? 'underline font-bold' : ''} rounded-lg text-sm px-2.5 py-2`}
+                    className={`cursor-pointer hover:font-bold text-black dark:text-white bg-yellow dark:bg-black ${isSelected ? 'underline font-bold' : ''} rounded-lg text-sm px-2.5 py-2`}
                 >
                     {item}
                 </label>

@@ -65,7 +65,7 @@ const Filters = ({ setGender, setSpecies, setStatus, setPageNumber }) => {
             <span className='font-bold text-center lg:text-xl'>FILTERS</span>
             <span onClick={handleClick} className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
 
-            <div className='bg-black mt-4 rounded-lg text-unknown' id="accordion-collapse" data-accordion="collapse">
+            <div className='bg-yellow dark:bg-black mt-4 rounded-lg dark:text-unknown' id="accordion-collapse" data-accordion="collapse">
                 <Gender selectedItems={selectedItems} setSelectedItems={setSelectedItems} setGender={setGender} setPageNumber={setPageNumber} />
                 <Species selectedItems={selectedItems} setSelectedItems={setSelectedItems} setSpecies={setSpecies} setPageNumber={setPageNumber} />
                 <Status selectedItems={selectedItems} setSelectedItems={setSelectedItems} setStatus={setStatus} setPageNumber={setPageNumber} />
