@@ -10,7 +10,7 @@ import Filters from '../components/Filters/Filters';
 const Home = () => {
   const [pageNumber, setPageNumber] = useState(1);
   const [searchInput, setSearchInput] = useState('');
-  
+
   const [gender, setGender] = useState('')
   const [species, setSpecies] = useState('')
   const [status, setStatus] = useState('')
@@ -35,20 +35,23 @@ const Home = () => {
         <div className='container mx-auto pt-4'>
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
           <div className='flex'>
+            <div class="w-60">
+              <Filters setGender={setGender} setSpecies={setSpecies} setStatus={setStatus} setPageNumber={setPageNumber} />
+            </div>
+            <div class="w-full">
+              {
+                (results)
+                  ? <CharacterList characters={results} />
 
-            <Filters setGender={setGender} setSpecies={setSpecies} setStatus={setStatus} setPageNumber={setPageNumber}/>
-            {
-              (results)
-                ? <CharacterList characters={results} />
-
-                :
-                <div className='flex flex-col justify-center items-center'>
-                  <p className='flex justify-center p-8 text-xxl font-bold'>No characters found! Please try again.</p>
-                  <img src="images/not-found.png" alt="" />
-                </div>
-            }
+                  :
+                  <div className='flex flex-col justify-center items-center'>
+                    <p className='flex justify-center p-8 text-xxl font-bold'>No characters found! Please try again.</p>
+                    <img src="images/not-found.png" alt="" />
+                  </div>
+              }
+              <Pagination info={info} setPageNumber={setPageNumber} pageNumber={pageNumber} />
+            </div>
           </div>
-          <Pagination info={info} setPageNumber={setPageNumber} pageNumber={pageNumber} />
         </div>
       </div>
     </>
