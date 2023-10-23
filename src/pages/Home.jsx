@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { CharacterList } from '../components/CharacterList';
 import Pagination from '../components/pagination/Pagination';
@@ -31,7 +32,6 @@ const Home = () => {
   return (
     <>
       <div className='bg-gradient-to-r from-indigo-500 dark:from-indigo-900  to-purplepink-500 dark:to-slate-800 h-full'>
-        <Header />
         <div className='container mx-auto pt-4'>
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
           <div className='flex'>
