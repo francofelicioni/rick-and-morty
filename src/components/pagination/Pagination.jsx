@@ -4,7 +4,7 @@ import ReactPaginate from 'react-paginate';
 const Pagination = ({ info, setPageNumber, pageNumber }) => {
 
     return (
-        <div className='flex w-1/2 justify-between items-center p-4 mx-auto'>
+        <div className='hidden md:flex w-3/4 justify-between items-center p-4 mx-auto'>
             <ReactPaginate
                 breakLabel="..."
                 nextLabel="Next"

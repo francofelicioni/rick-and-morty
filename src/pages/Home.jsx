@@ -34,7 +34,7 @@ const Home = () => {
       <div className='bg-gradient-to-r from-indigo-500 dark:from-indigo-900  to-purplepink-500 dark:to-slate-800 h-full'>
         <div className='container mx-auto pt-4'>
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
-          <div className='flex'>
+          <div className='flex justify-between px-5'>
             <div class="w-60">
               <Filters setGender={setGender} setSpecies={setSpecies} setStatus={setStatus} setPageNumber={setPageNumber} />
             </div>

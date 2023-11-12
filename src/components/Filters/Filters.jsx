@@ -60,7 +60,7 @@ const Filters = ({ setGender, setSpecies, setStatus, setPageNumber }) => {
     const accordion = new Accordion(accordionItems, options);
 
     return (
-        <div className='flex flex-col p-5'>
+        <div className='flex flex-col p-2 md:p-5'>
 
             <span className='font-bold text-center lg:text-xl'>FILTERS</span>
             <span onClick={handleClick} className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
