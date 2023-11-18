@@ -61,7 +61,6 @@ const Filters = ({ setGender, setSpecies, setStatus, setPageNumber }) => {
 
     return (
         <div className='flex flex-col p-2 md:p-5'>
-
             <span className='font-bold text-center lg:text-xl'>FILTERS</span>
             <span onClick={handleClick} className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
 
@@ -70,8 +69,6 @@ const Filters = ({ setGender, setSpecies, setStatus, setPageNumber }) => {
                 <Species selectedItems={selectedItems} setSelectedItems={setSelectedItems} setSpecies={setSpecies} setPageNumber={setPageNumber} />
                 <Status selectedItems={selectedItems} setSelectedItems={setSelectedItems} setStatus={setStatus} setPageNumber={setPageNumber} />
             </div>
-
-
         </div>
     )
 }

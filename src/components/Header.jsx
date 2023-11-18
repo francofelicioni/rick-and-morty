@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-
 import { MdOutlineDarkMode, MdDarkMode } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
@@ -31,11 +30,9 @@ const Header = () => {
     }
   }, [theme])
 
-
   const handleClick = () => {
     setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
   }
-
 
   return (
     <>
@@ -64,7 +61,6 @@ const Header = () => {
         </div>
       </div>
     </>
-
   )
 }
 

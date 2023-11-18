@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Character = ({ character }) => {
+const Card = ({ character }) => {
 
     let { name, species, status, image, location, origin } = character;
     const statusColor = {
@@ -39,3 +39,5 @@ export const Character = ({ character }) => {
         </div>
     )
 }
+
+export default Card
