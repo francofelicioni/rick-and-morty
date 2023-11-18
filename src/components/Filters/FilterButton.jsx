@@ -13,9 +13,7 @@ const FilterButton = ({ selectedItems, setSelectedItems, item, name, index, task
         setPageNumber(1);
         task(item)
     }
-
-
-
+    
     return (
         <div className='p-2'>
             <div className="flex items-center">

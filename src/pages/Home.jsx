@@ -1,12 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { Routes, Route } from 'react-router-dom';
-import { useSelector, useDispatch } from 'react-redux'
-import { CharacterList } from '../components/CharacterList';
-import Pagination from '../components/pagination/Pagination';
-import Header from '../components/header/Header';
-import SearchBar from '../components/Search/SearchBar';
+import CharacterList from '../components/CardList';
+import Pagination from '../components/Pagination';
+import SearchBar from '../components/SearchBar';
 import Filters from '../components/Filters/Filters';
-
 
 const Home = () => {
   const [pageNumber, setPageNumber] = useState(1);
@@ -41,7 +37,7 @@ const Home = () => {
             <div class="w-full">
               {
                 (results)
-                  ? <CharacterList characters={results} />
+                  ? <CharacterList results={results} />
 
                   :
                   <div className='flex flex-col justify-center items-center'>

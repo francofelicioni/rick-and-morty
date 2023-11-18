@@ -5,7 +5,6 @@ const Gender = ({selectedItems, setSelectedItems, setGender, setPageNumber}) => 
 
     const genders = ['Female', 'Male', 'Genderless', 'Unknown']
 
-  
     return (
         <div>
             <div>

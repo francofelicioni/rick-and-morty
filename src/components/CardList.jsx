@@ -1,16 +1,15 @@
-import React, { useEffect, useState } from 'react'
-import { Character } from './Cards/Character'
+import React from 'react'
+import Card from './Card'
 
-export const CharacterList = ({ characters }) => {
+const CardList = ({ results }) => {
 
-
-    if (characters) {
+    if (results) {
         return (
             <>
                 <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 md:gap-2 pt-4' >
-                    {characters.map((character) => (
+                    {results.map((character) => (
                         <div className='py-2' key={character.id}>
-                            <Character character={character} />
+                            <Card character={character} />
                         </div>
                     ))}
                 </div>
@@ -21,3 +20,5 @@ export const CharacterList = ({ characters }) => {
         <p>Loading...</p>
     }
 }
+
+export default CardList
