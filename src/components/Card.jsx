@@ -27,7 +27,7 @@ const Card = ({ character }) => {
                     <div className='flex flex-col gap-y-2'>
                         <div className='flex gap-x-2'>
                             <p className='text-blue-200 text-base lg:   text-sm font-bold'>Location:</p>
-                            <p className='text-pink text-base lg:text-xs text-left'>{origin.name === 'Earth (Replacement Dimension)' ? 'Earth (New Dimension)': origin.name }</p>
+                            <p className='text-pink text-base lg:text-xs text-left'>{location.name === 'Earth (Replacement Dimension)' ? 'Earth (New Dimension)': location.name }</p>
                         </div>
                         <div className="flex gap-x-2">
                             <p className='text-blue-200 font-bold text-base lg:text-sm'> First seen in:</p>
