@@ -43,7 +43,7 @@ const Episodes = () => {
                     </div>
                 </div>
 
-                <div className="">
+                <div className="w-full">
                     <div className='row'> 
                         <CardList results={results} />
                     </div>
