@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import CardList from '../components/CardList';
+import CardList from '../components/Cards/CardList';
 import InputGroup from '../components/Filters/Category/InputGroup';
 
 const Episodes = () => {

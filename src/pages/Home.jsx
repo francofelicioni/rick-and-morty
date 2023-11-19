@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import CharacterList from '../components/CardList';
+import CharacterList from '../components/Cards/CardList';
 import Pagination from '../components/Pagination';
 import SearchBar from '../components/SearchBar';
 import Filters from '../components/Filters/Filters';
