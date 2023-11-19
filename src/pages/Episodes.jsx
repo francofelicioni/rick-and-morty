@@ -45,7 +45,7 @@ const Episodes = () => {
 
                 <div className="w-full">
                     <div className='row'> 
-                        <CardList results={results} />
+                        <CardList page="/episodes/" results={results} />
                     </div>
                 </div>
             </div>

@@ -45,7 +45,7 @@ const Locations = () => {
                 </div>
                 <div className="w-full">
                     <div className='row'> 
-                        <CardList results={results} />
+                        <CardList page="/locations/" results={results} />
                     </div>
                 </div>
             </div>
