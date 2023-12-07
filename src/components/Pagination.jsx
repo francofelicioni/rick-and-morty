@@ -4,13 +4,13 @@ import ReactPaginate from 'react-paginate';
 const Pagination = ({ info, setPageNumber, pageNumber }) => {
 
     return (
-        <div className='hidden md:flex w-3/4 justify-between items-center p-4 mx-auto'>
+        <div className='bg-black rounded-lg hidden md:flex w-3/4 justify-between items-center p-4 mx-auto'>
             <ReactPaginate
                 breakLabel="..."
                 nextLabel=" > "
-                nextClassName="border border rounded-lg py-1 px-2 w-20 bg-blue-400 text-white text-center"
+                nextClassName="border border rounded-lg py-1 px-2 w-20 bg-black text-white text-center"
                 previousLabel=" < "
-                previousClassName="border border rounded-lg py-1 px-2 w-20 bg-blue-400 text-white text-center"
+                previousClassName="border border rounded-lg py-1 px-2 w-20 bg-black text-white text-center"
                 onPageChange={(data)=> {setPageNumber(data.selected +1)}}
                 pageRangeDisplayed={1}
                 pageCount={info?.pages}
