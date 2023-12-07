@@ -17,7 +17,7 @@ module.exports = {
         'light-salmon': '#e4a788',
         'yellow': '#f0e14a',
         'green': '	#97ce4c',
-        'pink': '#e89ac7',
+        'pink': '#E762D7',
         'violet': '79069F',
         'grey-background' : '#3C3E44',
         'light-blue': '#69C8EC',
