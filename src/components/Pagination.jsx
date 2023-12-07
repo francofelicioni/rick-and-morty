@@ -7,9 +7,9 @@ const Pagination = ({ info, setPageNumber, pageNumber }) => {
         <div className='hidden md:flex w-3/4 justify-between items-center p-4 mx-auto'>
             <ReactPaginate
                 breakLabel="..."
-                nextLabel="Next"
+                nextLabel=" > "
                 nextClassName="border border rounded-lg py-1 px-2 w-20 bg-blue-400 text-white text-center"
-                previousLabel="Previous"
+                previousLabel=" < "
                 previousClassName="border border rounded-lg py-1 px-2 w-20 bg-blue-400 text-white text-center"
                 onPageChange={(data)=> {setPageNumber(data.selected +1)}}
                 pageRangeDisplayed={1}

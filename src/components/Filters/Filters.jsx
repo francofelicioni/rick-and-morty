@@ -61,7 +61,7 @@ const Filters = ({ setGender, setSpecies, setStatus, setPageNumber }) => {
 
     return (
         <div className='flex flex-col p-2 md:p-5'>
-            <span className='font-bold text-center lg:text-xl'>FILTERS</span>
+            <span className='dark:text-red-300 font-bold text-center lg:text-xl'>FILTERS</span>
             <span onClick={handleClick} className='text-center lg:text-md underline text-white mt-2 cursor-pointer'>Clear</span>
 
             <div className='border border-black dark:border-white bg-slate-400 dark:bg-black mt-4 rounded-lg dark:text-unknown' id="accordion-collapse" data-accordion="collapse">
