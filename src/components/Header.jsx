@@ -36,10 +36,10 @@ const Header = () => {
 
   return (
     <>
-      <div className='flex justify-start md:justify-center items-center pl-4 py-2 bg-light-salmon dark:bg-black'>
+      <div className='flex justify-start md:justify-center items-center pl-4 py-2 bg-red-500 dark:bg-black group'>
         <Link to='/'>
-          <h1 className="hidden md:block text-brown dark:text-pink font-bold hover:text-black hover:dark:text-light-salmon text-3xl lg:text-5xl transition easy-in duration-500">  RICK  <span className='text-white dark:text-green'>&</span> MORTY <span className='text-yellow'>WIKI</span></h1>
-          <h1 className="md:hidden text-brown dark:text-pink font-bold hover:text-black hover:dark:text-light-salmon text-3xl transition easy-in duration-500">  R  <span className='text-white dark:text-green'>&</span> M <span className='text-yellow'>WIKI</span></h1>
+          <h1 className="hidden md:block text-black dark:text-pink font-bold group-hover:text-dark:hover:text-light-blue hover:dark:text-light-salmon text-3xl lg:text-5xl transition easy-in duration-500">  RICK  <span className='text-yellow dark:text-green'>&</span> MORTY <span className='text-blue-600 dark:text-yellow'>WIKI</span></h1>
+          <h1 className="md:hidden text-brown dark:text-pink font-bold group-hover:text-black group-hover:text-dark:hover:text-light-blue group-hover:dark:text-light-salmon text-3xl transition easy-in duration-500">  R  <span className='text-light-salmon dark:text-green'>&</span> M <span className='text-white '>WIKI</span></h1>
         </Link>
 
         <div className='absolute right-0 p-5 flex items-center' onClick={handleClick}>
