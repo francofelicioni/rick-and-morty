@@ -8,8 +8,8 @@ const Gender = ({selectedItems, setSelectedItems, setGender, setPageNumber}) => 
     return (
         <div>
             <div>
-                <h2 id="accordion-collapse-heading-1">
-                    <button type="button" className="accordion" data-accordion-target="#accordion-collapse-body-1" aria-expanded="false" aria-controls="accordion-collapse-body-1">
+                <h2 id="accordion-collapse-heading-1 group">
+                    <button type="button" className="accordion group-hover:text-white" data-accordion-target="#accordion-collapse-body-1" aria-expanded="false" aria-controls="accordion-collapse-body-1">
                         <span>Gender</span>
                         <svg data-accordion-icon className="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5 5 1 1 5" />
