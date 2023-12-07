@@ -27,7 +27,7 @@ const Home = () => {
 
   return (
     <>
-      <div className='bg-gradient-to-r from-emerald-400 dark:from-indigo-900  to-light-blue dark:to-yellow h-full'>
+      <div className='bg-gradient-to-r from-emerald-400 dark:from-indigo-900 to-light-blue dark:to-yellow h-full pb-5'>
         <div className='container mx-auto pt-4'>
           <SearchBar searchInput={searchInput} setSearchInput={setSearchInput} />
           <div className='flex justify-between px-5'>
@@ -37,7 +37,8 @@ const Home = () => {
             <div className="w-full">
               {
                 (results)
-                  ? <CardList page="/" results={results} />
+                  ? 
+                  <CardList page="/" results={results} />
 
                   :
                   <div className='flex flex-col justify-center items-center'>
